@@ -27,5 +27,4 @@ jobs:
 
       # Step 4: List files after unzip (optional, for debugging)
       - name: List files after unzip
-        run: ls -la ./unzipped_folder
-​​​​​​​​​​​​​​​​
+        run: ls -la ./
