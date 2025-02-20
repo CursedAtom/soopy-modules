@@ -1,0 +1,31 @@
+name: Unzip Files Workflow
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the main branch (adjust as needed)
+
+jobs:
+  unzip-files:
+    runs-on: ubuntu-latest  # Using Ubuntu as the runner
+
+    steps:
+      # Step 1: Checkout the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: List files (optional, for debugging)
+      - name: List files before unzip
+        run: ls -la
+
+      # Step 3: Unzip the file(s)
+      - name: Unzip files
+        run: |
+          unzip "*.zip" -d ./unzipped_folder
+        # Replace "*.zip" with your specific zip file name, e.g., "archive.zip"
+        # "-d ./unzipped_folder" specifies the destination folder (optional)
+
+      # Step 4: List files after unzip (optional, for debugging)
+      - name: List files after unzip
+        run: ls -la ./unzipped_folder
+​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
