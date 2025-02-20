@@ -21,11 +21,11 @@ jobs:
       # Step 3: Unzip the file(s)
       - name: Unzip files
         run: |
-          unzip "*.zip" -d ./unzipped_folder
+          unzip "*.zip" -d ./
         # Replace "*.zip" with your specific zip file name, e.g., "archive.zip"
         # "-d ./unzipped_folder" specifies the destination folder (optional)
 
       # Step 4: List files after unzip (optional, for debugging)
       - name: List files after unzip
         run: ls -la ./unzipped_folder
-​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+​​​​​​​​​​​​​​​​
