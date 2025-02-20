@@ -28,3 +28,9 @@ jobs:
       # Step 4: List files after unzip (optional, for debugging)
       - name: List files after unzip
         run: ls -la ./
+
+      - name: Upload unzipped files as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: unzipped-files
+          path: ./
